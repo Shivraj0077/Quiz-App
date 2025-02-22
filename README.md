@@ -1,9 +1,8 @@
 # Interactive Quiz Platform
 
-An interactive quiz platform built using **Vite** and **React.js**, featuring authentication, real-time quiz interactions, and a seamless user experience.
+An interactive quiz platform built using **Vite** and **React.js**, featuring real-time quiz interactions, and a seamless user experience.
 
 ## 🚀 Features
-- **User Authentication**: Secure login and registration functionality.
 - **Real-Time Quizzes**: Interactive quizzes with instant feedback.
 - **User Progress Tracking**: Track user scores and performance over time.
 - **Responsive UI**: Optimized for both desktop and mobile devices.
@@ -11,7 +10,6 @@ An interactive quiz platform built using **Vite** and **React.js**, featuring au
 
 ## 📂 Tech Stack
 - **Frontend**: React.js (Vite)
-- **Authentication**: Firebase/Auth or custom backend (depending on implementation)
 - **Deployment**: Vercel
 
 ## 🛠 Installation
@@ -23,8 +21,8 @@ Ensure you have the following installed:
 ### Setup & Run Locally
 ```sh
 # Clone the repository
-git clone https://github.com/yourusername/your-repo.git
-cd your-repo
+git clone https://github.com/Shivraj0077/Quiz-App.git
+cd my-app
 
 # Install dependencies
 npm install  # or yarn install
@@ -41,25 +39,11 @@ git add .
 git commit -m "Updated features"
 git push origin main  # or your deployment branch
 ```
-Vercel will automatically deploy the latest changes.
 
-### **Manual Deployment with Vercel CLI**
-```sh
-npm install -g vercel  # Install Vercel CLI
-vercel login           # Authenticate Vercel account
-vercel --prod          # Deploy latest changes to production
-```
+## Deployed Website
 
-## ⚙️ Environment Variables
-Create a `.env` file and add the required environment variables:
-```env
-VITE_API_URL=your_api_url
-VITE_FIREBASE_API_KEY=your_firebase_key
-```
+https://quiz-platfrom.vercel.app/
 
-## 📜 License
-This project is licensed under [MIT License](LICENSE).
-
-## 📞 Contact
-For any queries or contributions, reach out via [your-email@example.com] or open an issue in the repository.
+## Contact
+Email: shivrajpawar6906@gmail.com
 
