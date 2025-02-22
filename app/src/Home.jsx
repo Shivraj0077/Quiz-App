@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 const Home = () => {
   return (
     <div className="min-h-screen bg-gray-50 flex flex-col items-center">
-      {/* Navbar */}
       <nav className="sticky top-0 z-50 bg-white shadow-sm w-full">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
@@ -14,7 +13,6 @@ const Home = () => {
         </div>
       </nav>
 
-      {/* Hero Section */}
       <main className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center mt-16">
         <h1 className="text-5xl font-extrabold text-gray-900">
           Test Your Knowledge! 📚
@@ -23,7 +21,6 @@ const Home = () => {
           Challenge yourself with fun quizzes on various topics and improve your knowledge.
         </p>
         
-        {/* Quiz Button */}
         <Link 
           to="/dashboard" 
           className="mt-6 inline-block bg-blue-600 text-white text-lg font-semibold px-6 py-3 rounded-lg shadow-md hover:bg-blue-700 transition"
@@ -32,7 +29,6 @@ const Home = () => {
         </Link>
       </main>
 
-      {/* Features Section */}
       <section className="mt-12 max-w-4xl text-center">
         <h2 className="text-3xl font-bold text-gray-900">Why Take Our Quizzes?</h2>
         <div className="mt-6 grid grid-cols-1 sm:grid-cols-3 gap-6">

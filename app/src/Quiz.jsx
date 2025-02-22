@@ -83,7 +83,7 @@ const Quiz = () => {
     const score = detailedResults.filter(q => q.isCorrect).length;
 
     const attempt = {
-      id: uuidv4(), // Generate a unique ID
+      id: uuidv4(), 
       timestamp: new Date().toISOString(),
       score: score,
       total: quizData.length,
@@ -116,6 +116,12 @@ const Quiz = () => {
             className="mt-4 bg-purple-500 text-white px-6 py-3 rounded-lg text-xl hover:bg-purple-600 block w-full"
           >
             Check History
+          </button>
+          <button
+            onClick={() => navigate('/')}
+            className="mt-4 bg-green-500 text-white px-6 py-3 rounded-lg text-xl hover:bg-green-600 block w-full"
+          >
+            Go To Home Page
           </button>
         </div>
       ) : quizFinished ? (
