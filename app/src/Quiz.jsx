@@ -24,18 +24,7 @@ const Quiz = () => {
   const [timeLeft, setTimeLeft] = useState(30);
   const [showNext, setShowNext] = useState(false);
   const [quizFinished, setQuizFinished] = useState(false);
-  const [user, setUser] = useState(null);
   const navigate = useNavigate();
-
-  useEffect(() => {
-    // Check for logged-in user
-    const userStr = localStorage.getItem("loggedInUser");
-    if (!userStr) {
-      navigate("/login");
-      return;
-    }
-    setUser(JSON.parse(userStr));
-  }, [navigate]);
 
   useEffect(() => {
     if (!quizStarted || quizFinished) return;
@@ -49,10 +38,6 @@ const Quiz = () => {
   }, [timeLeft, quizStarted, quizFinished]);
 
   const handleStartQuiz = () => {
-    if (!user) {
-      navigate("/login");
-      return;
-    }
     setQuizStarted(true);
     setTimeLeft(30);
   };
@@ -83,8 +68,6 @@ const Quiz = () => {
   };
 
   const saveQuizAttempt = async () => {
-    if (!user) return;
-
     const detailedResults = quizData.map((question, i) => {
       const userAnswer = submittedAnswers[i];
       const correctAnswer = question.answer;
@@ -100,7 +83,7 @@ const Quiz = () => {
     const score = detailedResults.filter(q => q.isCorrect).length;
 
     const attempt = {
-      userId: user.username,
+      id: uuidv4(), // Generate a unique ID
       timestamp: new Date().toISOString(),
       score: score,
       total: quizData.length,
@@ -115,39 +98,9 @@ const Quiz = () => {
     }
   };
 
-  if (!user) {
-    return (
-      <div className="min-h-screen bg-gray-50 flex items-center justify-center">
-        <div className="bg-white p-8 rounded-lg shadow-lg">
-          <h2 className="text-2xl font-bold mb-4">Please Login</h2>
-          <p className="text-gray-600 mb-4">You need to be logged in to take the quiz.</p>
-          <button
-            onClick={() => navigate("/login")}
-            className="bg-blue-500 text-white px-6 py-2 rounded-lg hover:bg-blue-600"
-          >
-            Go to Login
-          </button>
-        </div>
-      </div>
-    );
-  }
-
   return (
     <div className="p-6 bg-gray-100 min-h-screen flex flex-col items-center">
       <div className="w-full max-w-4xl flex justify-between items-center mb-6">
-        <h2 className="text-3xl font-bold">Quiz</h2>
-        <div className="flex items-center gap-4">
-          <span className="text-gray-600">Welcome, {user.username}</span>
-          <button
-            onClick={() => {
-              localStorage.removeItem("loggedInUser");
-              navigate("/login");
-            }}
-            className="bg-gray-500 text-white px-4 py-2 rounded-lg hover:bg-gray-600"
-          >
-            Logout
-          </button>
-        </div>
       </div>
 
       {!quizStarted ? (
@@ -161,7 +114,7 @@ const Quiz = () => {
           <button
             onClick={() => navigate('/history')}
             className="mt-4 bg-purple-500 text-white px-6 py-3 rounded-lg text-xl hover:bg-purple-600 block w-full"
-            >
+          >
             Check History
           </button>
         </div>

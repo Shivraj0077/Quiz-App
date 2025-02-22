@@ -1,4 +1,3 @@
-// QuizDetails.jsx
 import { useEffect, useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import { getAttemptById } from "./utils/indb";
@@ -10,18 +9,7 @@ const QuizDetails = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    const checkAuth = () => {
-      const userStr = localStorage.getItem("loggedInUser");
-      if (!userStr) {
-        navigate("/login");
-        return false;
-      }
-      return true;
-    };
-
     const fetchAttempt = async () => {
-      if (!checkAuth()) return;
-      
       try {
         const attemptData = await getAttemptById(id);
         if (!attemptData) {
