@@ -52,7 +52,7 @@ git push origin main  # or your deployment branch
 ```
 
 ## Deployed Link
-    https://quiz-platform-79ua1rfpd-shivrajs-projects-0880d39f.vercel.app/
+    Click here to visit the Quiz Platform
 
 ## 📞 Contact
      shivrajpawar6906@gmail.com
