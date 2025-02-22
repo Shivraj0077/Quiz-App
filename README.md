@@ -42,7 +42,7 @@ git push origin main  # or your deployment branch
 
 ## Deployed Website
 
-https://quiz-platfrom.vercel.app/
+https://quiz-platform-79ua1rfpd-shivrajs-projects-0880d39f.vercel.app/
 
 ## Contact
 Email: shivrajpawar6906@gmail.com
