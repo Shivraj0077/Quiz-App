@@ -9,6 +9,7 @@ const History = () => {
   useEffect(() => {
     const fetchHistory = async () => {
       const attempts = await getAttempts();
+      console.log("Fetched attempts:", attempts); // Log the fetched attempts
       setHistory(
         attempts.sort((a, b) => new Date(b.timestamp) - new Date(a.timestamp))
       );
