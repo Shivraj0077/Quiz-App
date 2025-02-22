@@ -50,25 +50,9 @@ git add .
 git commit -m "Updated features"
 git push origin main  # or your deployment branch
 ```
-Vercel will automatically deploy the latest changes.
 
-### **Manual Deployment with Vercel CLI**
-```sh
-npm install -g vercel  # Install Vercel CLI
-vercel login           # Authenticate Vercel account
-vercel --prod          # Deploy latest changes to production
-```
-
-## ⚙️ Environment Variables
-Create a `.env` file and add the required environment variables:
-```env
-VITE_API_URL=your_api_url
-VITE_FIREBASE_API_KEY=your_firebase_key
-```
-
-## 📜 License
-This project is licensed under [MIT License](LICENSE).
+## Deployed Link
+    https://quiz-platform-79ua1rfpd-shivrajs-projects-0880d39f.vercel.app/
 
 ## 📞 Contact
-For any queries or contributions, reach out via [your-email@example.com] or open an issue in the repository.
-
+     shivrajpawar6906@gmail.com
