@@ -14,7 +14,7 @@ An interactive quiz platform built using **Vite** and **React.js**, featuring re
 - **Question's Timer**: Every question has 30 seconds of time limit to submit. Once question is submitted if correct option is selected "Answer is correct will be displayed". If wrong answer is submitted Wrong answer   
     with correct option is displayed.
 - **Next Option**: Once timer is finised next question is automatically displayed(even if answer is not submitted to current question as per time limit).
-- **Track Progress**: Once all questions timer is finished or all questions are submitted, user can view thier progress of all submissions made and check their right and wrong answers with actual correct answers.
+- **Track Progress**: Once all questions timer is finished or all questions are submitted, user can view their progress of all submissions made and check their right and wrong answers with actual correct answers.
 
 ## 📂 Tech Stack
 - **Frontend**: React.js (Vite)
