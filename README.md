@@ -52,7 +52,7 @@ git push origin main  # or your deployment branch
 ```
 
 ## Deployed Link
-    Click here to visit the Quiz Platform
+Click here to visit the Quiz Platform
 
 ## 📞 Contact
      shivrajpawar6906@gmail.com
