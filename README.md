@@ -14,7 +14,7 @@ An interactive quiz platform built using **Vite** and **React.js**, featuring au
 - **Question Timer**: Each question has a 30-second time limit.
     If the correct answer is selected, the message "Answer is correct" is displayed.
     If the wrong answer is selected, the message "Wrong answer" is displayed along with the correct answer.
-- **Auto-Next Question**: Once the timer ends, the next question is automatically displayed—even if no answer was submitted.
+- **Auto-Next Question**: Once the timer ends, the next question is automatically displayed, even if no answer was submitted.
 - **Track Progress**: After all questions are completed (either by submission or timer expiration), users can review their progress.
     They can check their correct and incorrect answers along with the actual correct answers.
 
